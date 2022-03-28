@@ -1,0 +1,145 @@
+/* SOMMAIRE 
+
+- RESET 
+- LOADER
+
+
+*/
+
+
+
+
+/* ------------------------------------------------
+                    RESET
+--------------------------------------------------- */
+
+/* Box sizing */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Reset margin */
+
+body,
+h1,
+h2,
+h3,
+h4,
+figure,
+picture {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set up the body */
+
+body {
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+/* Make images easier to work with (si dieu le veut) */
+
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Make forms elements easier to work with */
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+ul {
+    list-style-type: none;
+  }
+
+a {
+    text-decoration: none;
+}
+
+/* Remove animations for those who turned them off (pour ceux qui décident d'enlever les animations dans lur browser : question d'accessiblilité) */
+
+@media (prefers-reduced-motions: reduce){
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+/* ------------------------------------------------
+                    LOADER
+--------------------------------------------------- */
+
+    /* custom variable : */
+
+    :root {
+        --gradient: linear-gradient(
+            45deg,
+            #B796AC,
+            #fff6e8
+        );
+    }
+
+.loader 
+{
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    min-height: 100vh;
+    background-image: var(--gradient);
+    background-size: 400%;
+    animation: bg-animation 5s infinite alternate;
+    -webkit-transition: opacity 0.3s ease-out;
+    -moz-transition: opacity 0.3s ease-out;
+    -ms-transition: opacity 0.3s ease-out;
+    -o-transition: opacity 0.3s ease-out;
+    transition: opacity 0.5s ease-out;
+}
+
+@keyframes bg-animation {
+    0% {
+        background-position: left;
+    }
+    100% {
+        background-position: right;
+    }
+}
+
+.loader.fade {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* 
+.vanish {
+    -webkit-transition: opacity 3s;
+    -moz-transition: opacity 3s;     
+    transition: opacity 3s; 
+}
+
+@keyframes vanish {
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
+} */
+
+body {
+    background-color: #fff6e8;
+}
