@@ -1,81 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="script.js" charset="utf-8"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"
+    ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
-    <link href="style.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+
+    <link href="style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="locomotive-scroll.css" />
+
     <title>Confiance Cosmétiques</title>
-</head>
-<body>
-    
+  </head>
+  <body data-scroll-container>
     <div id="preloader">
-        <div id="loader">
-        </div>        
+      <div id="loader"></div>
     </div>
 
     <header>
+      <div class="site-logo">confiance cosmétiques</div>
 
-        <div class="site-logo">confiance cosmétiques</div>
-
-        <nav>
-            <div class="site-menu">
-                <div class="menu-item">Item 1</div>
-                <div class="menu-item">Item 2</div>
-                <div class="menu-item">Item 3</div>
-                <div class="menu-item">Item 4</div>
-            </div>
-        </nav>
-
+      <nav>
+        <div class="site-menu">
+          <div class="menu-item">Item 1</div>
+          <div class="menu-item">Item 2</div>
+          <div class="menu-item">Item 3</div>
+          <div class="menu-item">Item 4</div>
+        </div>
+      </nav>
     </header>
 
     <main>
-
-        <article>
-            <div class="container">
-                <div class="wrapper-image">
-                    <div class="box"></div>
-                    <div><img src="images/tima-miroshnichenko-landing-page.jpeg" alt="landing-page image with flowers and skincare"></div>
-                </div>
-
-                <div class="circle-shape"></div>
-                <div class="circle-shape-2"></div>
-                <div class="circle-shape-3"></div>
-                <div class="blocks">
-                    <div class="block-1 block">C</div>
-                    <div class="block-2 block">O</div>
-                    <div class="block-3 block">N</div>
-                    <div class="block-4 block">F</div>
-                    <div class="block-5 block">I</div>
-                    <div class="block-6 block">A</div>
-                    <div class="block-7 block">N</div>
-                    <div class="block-8 block">C</div>
-                    <div class="block-9 block">E</div>
-                </div>
+      <article>
+        <div class="container">
+          <div class="wrapper-image">
+            <div class="box"></div>
+            <div>
+              <img
+                src="images/tima-miroshnichenko-landing-page.jpeg"
+                alt="landing-page image with flowers and skincare"
+              />
             </div>
-        </article>
+          </div>
 
+          <div class="circle-shape"></div>
+          <div class="circle-shape-2"></div>
+          <div class="circle-shape-3"></div>
+          <div class="blocks">
+            <div class="block-1 block">C</div>
+            <div class="block-2 block">O</div>
+            <div class="block-3 block">N</div>
+            <div class="block-4 block">F</div>
+            <div class="block-5 block">I</div>
+            <div class="block-6 block">A</div>
+            <div class="block-7 block">N</div>
+            <div class="block-8 block">C</div>
+            <div class="block-9 block">E</div>
+          </div>
+        </div>
+      </article>
 
-        <article>
+      <article class="about">
+        <div class="grid-img1">
+          <img class="thumbnail" src="/images/img1.jpg" alt="image" />
+        </div>
 
-        </article>
+        <div class="grid-img2">
+          <img class="thumbnail" src="/images/img2.jpg" alt="image" />
+        </div>
+        <div class="grid-img3">
+          <img class="test" src="/images/img1.jpg" alt="image" />
+        </div>
+      </article>
 
+      <article></article>
 
-        <article>
-            
-        </article>
-
-
-        <article class = "contact_me">
-            
-        </article>
+      <article class="contact_me"></article>
     </main>
 
-    <footer>
-
-    </footer>
-</body>
+    <footer></footer>
+    <script src="parallax.js"></script>
+  </body>
 </html>
