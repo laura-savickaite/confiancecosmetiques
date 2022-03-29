@@ -1,5 +1,6 @@
 /* SOMMAIRE 
 
+- FONTS
 - RESET 
 - LOADER
 - LANDING PAGE
@@ -14,6 +15,11 @@
 @font-face {
     font-family: Titreprincipal;
     src: url(fonts/FogtwoNo5\ copie.otf);
+}
+
+@font-face {
+    font-family: LoaderTitre;
+    src: url(fonts/Migra-Extrabold\ copie.otf);
 }
 
 
@@ -97,7 +103,7 @@ a {
     :root {
         --gradient: linear-gradient(
             45deg,
-            #c57aab,
+            #ce99bb,
             #fff6e8
         );
     }
@@ -140,6 +146,8 @@ a {
     }
 }
 
+      
+
 /* ------------------------------------------------
                     LANDING PAGE
 --------------------------------------------------- */
@@ -179,15 +187,6 @@ nav {
     margin-left: 60px;
 }
 
-.showreel {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    padding: 40px;
-    text-transform: uppercase;
-    color: #585e50;
-}
-
 .container {
     width: 100%;
     height: 100vh;
@@ -201,7 +200,7 @@ nav {
 .blocks {
     display: flex;
     font-size: 140px;
-    color: #585e50;
+    color: #47126B;
     z-index: 2;
 }
 

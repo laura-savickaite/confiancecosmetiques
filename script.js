@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', function loaded() {
 
+
+    
     //LOADER
 
     function showSite(){
