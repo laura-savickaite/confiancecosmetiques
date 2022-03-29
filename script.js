@@ -4,14 +4,23 @@ document.addEventListener('DOMContentLoaded', function loaded() {
     var buttons = document.querySelectorAll('button');
     var buttonLoad = buttons[0];
 
-    
-
-    buttonLoad.onclick = function (){
-        loader.classList.add('fade');
-    }
 
 
-    // function unfade(element) {
+    // buttonLoad.onclick = function (){
+    //     loader.classList.add('fade');
+    // }
+
+
+    function showSite(){
+        $('#loader').fadeOut(); // will first fade out the loading animation 
+        $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+        $('body').delay(350).css({'overflow':'visible'});
+  }
+      $(window).on('load', function() { // makes sure the whole site is loaded 
+      setTimeout(function(){ showSite() }, 2000);
+      })
+
+    // function fade(element) {
     //     var op = 0.1;  // initial opacity
     //     element.style.display = 'block';
     //     var timer = setInterval(function () {
@@ -24,7 +33,4 @@ document.addEventListener('DOMContentLoaded', function loaded() {
     //     }, 10);
     // }
 
-    // let loaderBG = document.getElementsByClassName('loader');
-
-    // unfade(loaderBG[0]);
 })

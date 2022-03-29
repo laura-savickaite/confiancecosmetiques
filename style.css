@@ -94,7 +94,23 @@ a {
         );
     }
 
-.loader 
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(#fff6e8, #d1c1cc);
+    z-index: 800;
+    height: 100%;
+    width: 100%;
+}
+.no-js #preloader, .oldie #preloader {
+    display: none;
+}
+
+#loader 
 {
     opacity: 1;
     position: fixed;
@@ -105,11 +121,6 @@ a {
     background-image: var(--gradient);
     background-size: 400%;
     animation: bg-animation 5s infinite alternate;
-    -webkit-transition: opacity 0.3s ease-out;
-    -moz-transition: opacity 0.3s ease-out;
-    -ms-transition: opacity 0.3s ease-out;
-    -o-transition: opacity 0.3s ease-out;
-    transition: opacity 0.5s ease-out;
 }
 
 @keyframes bg-animation {
@@ -119,11 +130,6 @@ a {
     100% {
         background-position: right;
     }
-}
-
-.loader.fade {
-    opacity: 0;
-    visibility: hidden;
 }
 
 /* 
