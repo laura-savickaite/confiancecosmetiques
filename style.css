@@ -4,6 +4,8 @@
 - RESET 
 - LOADER
 - LANDING PAGE
+- CONTACT ME
+    - INSTAFEED
 
 */
 
@@ -266,7 +268,10 @@ nav {
 }
 
 
-
+article {
+    width: 100vw;
+    height: 100vh;
+}
 
 
 
@@ -274,11 +279,33 @@ nav {
                     CONTACT ME
 --------------------------------------------------- */
 
+    /* INSTAFEED */
+
 .contact_me {
     background: linear-gradient(#fff6e8,#cea1be);
-    width: 100vw;
-    height: 100vh;
 }
+
+.insta {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.instafeed {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    margin: auto;
+}
+
+.instafeed img, .instafeed video {
+    object-fit: contain;
+    height: 400px;
+    width: 100%;
+    padding: 3px;
+}
+
+
+
+
 
 
 
@@ -288,5 +315,5 @@ nav {
 
 footer {
     background-color: #cea1be;
-    height: 30vh;
+    height: 100vh;
 }
