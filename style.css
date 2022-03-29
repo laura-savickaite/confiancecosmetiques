@@ -19,10 +19,6 @@
     src: url(fonts/FogtwoNo5\ copie.otf);
 }
 
-@font-face {
-    font-family: LoaderTitre;
-    src: url(fonts/Migra-Extrabold\ copie.otf);
-}
 
 
 /* ------------------------------------------------
@@ -44,6 +40,7 @@ h1,
 h2,
 h3,
 h4,
+p,
 figure,
 picture {
     margin: 0;
@@ -197,6 +194,7 @@ nav {
     justify-content: center;
     align-items: center;
     background:  #fff6e8;
+    margin-bottom: 200px;
 }
 
 .blocks {
@@ -270,7 +268,7 @@ nav {
 
 article {
     width: 100vw;
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 
@@ -284,13 +282,10 @@ article {
 
     /* INSTAFEED */
 
-.contact_me {
-    background: linear-gradient(#fff6e8,#cea1be);
-}
-
 .insta {
     display: flex;
     flex-wrap: wrap;
+    background: linear-gradient(#fff6e8,#cea1be);
 }
 
 .instafeed {
@@ -301,12 +296,10 @@ article {
 
 .instafeed img, .instafeed video {
     object-fit: contain;
-    height: 400px;
+    height: 220px;
     width: 100%;
     padding: 3px;
 }
-
-
 
 
 
@@ -317,6 +310,28 @@ article {
 --------------------------------------------------- */
 
 footer {
-    background-color: #cea1be;
-    height: 100vh;
+    background: linear-gradient(#cea1be, #ce84b4);
+    height: 45vh;
+}
+
+#cypres-logo {
+    padding-top: 5%;
+    margin: auto;
+}
+
+.footer-social {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-evenly;
+    margin-top: 5%;
+}
+
+.footer-social img {
+    width: 30px;    
+}
+
+.footer-social p {
+    font-size: 1.3rem;   
+    font-family: Titreprincipal;
 }
