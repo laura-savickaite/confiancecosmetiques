@@ -2,7 +2,7 @@
 
 - RESET 
 - LOADER
-
+- LANDING PAGE
 
 */
 
@@ -132,20 +132,11 @@ a {
     }
 }
 
-/* 
-.vanish {
-    -webkit-transition: opacity 3s;
-    -moz-transition: opacity 3s;     
-    transition: opacity 3s; 
-}
-
-@keyframes vanish {
-    100%{
-        opacity: 0;
-        visibility: hidden;
-    }
-} */
+/* ------------------------------------------------
+                    LANDING PAGE
+--------------------------------------------------- */
 
 body {
     background-color: #fff6e8;
 }
+
