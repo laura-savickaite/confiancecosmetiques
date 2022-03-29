@@ -19,6 +19,10 @@
     src: url(fonts/FogtwoNo5\ copie.otf);
 }
 
+@font-face {
+    font-family: logo;
+    src: url(fonts/PPEiko-Thin\ copie.otf);
+}
 
 
 /* ------------------------------------------------
@@ -133,7 +137,7 @@ a {
     min-height: 100vh;
     background-image: var(--gradient);
     background-size: 400%;
-    animation: bg-animation 5s infinite alternate;
+    animation: bg-animation 4s infinite alternate;
 }
 
 @keyframes bg-animation {
@@ -264,6 +268,28 @@ nav {
     left: 0;
     z-index: 0;
 }
+
+.slogan {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+    font-family: logo;
+    text-transform: lowercase;
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-duration: 15s;
+    animation-duration: 15s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    }
+    @-webkit-keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+    }
+    @keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+    } 
 
 
 article {
