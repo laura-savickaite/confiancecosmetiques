@@ -380,8 +380,8 @@ h2::before {
 .insta {
     display: flex;
     flex-wrap: wrap;
-    background: linear-gradient(#fff6e8,#cea1be);
     margin-top: 350px;
+    margin-bottom: 200px;
 }
 
 .instafeed {
@@ -418,7 +418,8 @@ h2::before {
       flex-direction: row;
       align-items: center;
       justify-content: space-evenly;
-      margin-top: 5%;
+      width: 30%;
+      margin: auto;
   }
   
   .footer-social img {
