@@ -19,8 +19,8 @@
 }
 
 @font-face {
-    font-family: logo;
-    src: url(fonts/PPEiko-Thin\ copie.otf);
+  font-family: logo;
+  src: url(fonts/PPEiko-Thin\ copie.otf);
 }
 
 /* ------------------------------------------------
@@ -95,11 +95,6 @@ a {
   }
 }
 
-
-
-
-
-
 /* ------------------------------------------------
                     LOADER
 --------------------------------------------------- */
@@ -111,31 +106,31 @@ a {
 }
 
 #preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(#fff6e8, #cea1be);
-    z-index: 800;
-    height: 100%;
-    width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(#fff6e8, #cea1be);
+  z-index: 800;
+  height: 100%;
+  width: 100%;
 }
-.no-js #preloader, .oldie #preloader {
-    display: none;
+.no-js #preloader,
+.oldie #preloader {
+  display: none;
 }
 
-#loader 
-{
-    opacity: 1;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    min-height: 100vh;
-    background-image: var(--gradient);
-    background-size: 400%;
-    animation: bg-animation 4s infinite alternate;
+#loader {
+  opacity: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  min-height: 100vh;
+  background-image: var(--gradient);
+  background-size: 400%;
+  animation: bg-animation 4s infinite alternate;
 }
 
 #loader {
@@ -158,10 +153,6 @@ a {
     background-position: right;
   }
 }
-
-
-
-
 
 /* ------------------------------------------------
                     LANDING PAGE
@@ -203,14 +194,14 @@ nav {
 }
 
 .container {
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background:  #fff6e8;
-    margin-bottom: 200px;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff6e8;
+  margin-bottom: 200px;
 }
 
 .blocks {
@@ -282,36 +273,40 @@ nav {
 }
 
 .slogan {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 5%;
-    font-family: logo;
-    text-transform: lowercase;
-    -webkit-animation-name: fadeIn;
-    animation-name: fadeIn;
-    -webkit-animation-duration: 20s;
-    animation-duration: 20s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    }
-    @-webkit-keyframes fadeIn {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-    }
-    @keyframes fadeIn {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-    } 
-
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5%;
+  font-family: logo;
+  text-transform: lowercase;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: 20s;
+  animation-duration: 20s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
 article {
-    width: 100vw;
-    /* height: 100vh; */
+  width: 100vw;
+  /* height: 100vh; */
 }
-  
 
-
-  
 /* ------------------------------------------------
                     ABOUT
 --------------------------------------------------- */
@@ -371,61 +366,156 @@ h2::before {
 }
 
 .content {
-  /* background-color: white; */
   grid-area: 8 / 3 / 8 / 8;
 }
 
-    /* INSTAFEED */
+.button {
+  pointer-events: auto;
+  cursor: pointer;
+  background: #e7e7e7;
+  border: none;
+  padding: 1.5rem 3rem;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  position: relative;
+  display: inline-block;
+}
+
+.button::before,
+.button::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.content__item {
+  /* grid-area: 8 / 10 / 8 / 8; */
+  position: relative;
+  left: 42%;
+}
+
+@keyframes rotateIt {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.button--surtur {
+  padding: 0;
+  background: none;
+  -webkit-clip-path: circle(40% at 50% 50%);
+  clip-path: circle(40% at 50% 50%);
+}
+
+.button--surtur:focus-visible {
+  background: #443ffc;
+}
+
+.textcircle {
+  position: relative;
+  display: block;
+  width: 200px;
+}
+
+.textcircle text {
+  font-size: 32px;
+  text-transform: uppercase;
+  fill: #000;
+}
+
+.textcircle textPath {
+  letter-spacing: 17px; /* Firefox needs this */
+}
+
+.button--surtur .textcircle {
+  animation: rotateIt 7s linear infinite;
+}
+
+.eye {
+  position: absolute;
+  z-index: 2;
+  width: 80px;
+  height: 80px;
+  top: calc(50% - 30px);
+  left: 30%;
+}
+
+.eye__outer,
+.eye__inner,
+.eye__lashes-up,
+.eye__lashes-down {
+  stroke: #000;
+  fill: none;
+  stroke-width: 1.5px;
+}
+
+.eye__lashes-down {
+  opacity: 0;
+}
+
+.button--surtur .eye__lashes-up,
+.button--surtur .eye__inner,
+.button--surtur .eye__iris {
+  animation: blinkHide 2s step-end infinite;
+}
+
+.button--surtur .eye__lashes-down {
+  animation: blinkShow 2s step-end infinite;
+}
+
+/* INSTAFEED */
 
 .insta {
-    display: flex;
-    flex-wrap: wrap;
-    background: linear-gradient(#fff6e8,#cea1be);
-    margin-top: 350px;
+  display: flex;
+  flex-wrap: wrap;
+  background: linear-gradient(#fff6e8, #cea1be);
+  margin-top: 350px;
 }
 
 .instafeed {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: auto;
 }
 
-.instafeed img, .instafeed video {
-    object-fit: contain;
-    height: 220px;
-    width: 100%;
-    padding: 3px;
+.instafeed img,
+.instafeed video {
+  object-fit: contain;
+  height: 220px;
+  width: 100%;
+  padding: 3px;
 }
-
-
 
 /* ------------------------------------------------
                       FOOTER
   --------------------------------------------------- */
-  
-  footer {
-      background: linear-gradient(#cea1be, #ce84b4);
-      height: 45vh;
-  }
-  
-  .cypres-logo {
-      padding-top: 5%;
-      margin: auto;
-  }
-  
-  .footer-social {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-evenly;
-      margin-top: 5%;
-  }
-  
-  .footer-social img {
-      width: 30px;    
-  }
-  
-  .footer-social p {
-      font-size: 1.3rem;   
-      font-family: Titreprincipal;
-  }
+
+footer {
+  background: linear-gradient(#cea1be, #ce84b4);
+  height: 45vh;
+}
+
+.cypres-logo {
+  padding-top: 5%;
+  margin: auto;
+}
+
+.footer-social {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 5%;
+}
+
+.footer-social img {
+  width: 30px;
+}
+
+.footer-social p {
+  font-size: 1.3rem;
+  font-family: Titreprincipal;
+}
