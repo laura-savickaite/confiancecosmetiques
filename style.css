@@ -416,7 +416,7 @@ h2::before {
   .footer-social {
       display: flex;
       flex-direction: row;
-      align-content: center;
+      align-items: center;
       justify-content: space-evenly;
       margin-top: 5%;
   }
