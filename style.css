@@ -260,20 +260,61 @@ nav {
                     CONTACT ME
 --------------------------------------------------- */
 
-.contact_me {
-  background: linear-gradient(#fff6e8, #cea1be);
-  width: 100vw;
-  height: 100vh;
-}
+    /* INSTAFEED */
 
-/* ------------------------------------------------
-                    FOOTER
---------------------------------------------------- */
-
-footer {
-  background-color: #cea1be;
-  height: 30vh;
-}
+    .insta {
+      display: flex;
+      flex-wrap: wrap;
+      background: linear-gradient(#fff6e8,#cea1be);
+  }
+  
+  .instafeed {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); 
+      margin: auto;
+  }
+  
+  .instafeed img, .instafeed video {
+      object-fit: contain;
+      height: 220px;
+      width: 100%;
+      padding: 3px;
+  }
+  
+  
+  
+  
+  
+  /* ------------------------------------------------
+                      FOOTER
+  --------------------------------------------------- */
+  
+  footer {
+      background: linear-gradient(#cea1be, #ce84b4);
+      height: 45vh;
+  }
+  
+  .cypres-logo {
+      padding-top: 5%;
+      margin: auto;
+  }
+  
+  .footer-social {
+      display: flex;
+      flex-direction: row;
+      align-content: center;
+      justify-content: space-evenly;
+      margin-top: 5%;
+  }
+  
+  .footer-social img {
+      width: 30px;    
+  }
+  
+  .footer-social p {
+      font-size: 1.3rem;   
+      font-family: Titreprincipal;
+  }
 
 /* ------------------------------------------------
                     ABOUT
