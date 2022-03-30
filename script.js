@@ -17,13 +17,13 @@ document.addEventListener('DOMContentLoaded', function loaded() {
 
       //LANDING PAGE
 
-      TweenMax.to(".block-1", 5, {
-          x: "-180",
-          y: "-100",
-          scale: "2.4",
-          ease: Expo.easeInOut, 
-      })
-      TweenMax.to(".block-2", 5, {
+    TweenMax.to(".block-1", 5, {
+        x: "-180",
+        y: "-100",
+        scale: "2.4",
+        ease: Expo.easeInOut, 
+    })
+    TweenMax.to(".block-2", 5, {
         x: "-180",
         y: "200",
         scale: "1.2",
@@ -71,7 +71,6 @@ document.addEventListener('DOMContentLoaded', function loaded() {
         scale: "0.8",
         ease: Expo.easeInOut, 
     })
-
     TweenMax.to(".box", 5.4, {
         y: "-100%",
         ease: Expo.easeInOut,
