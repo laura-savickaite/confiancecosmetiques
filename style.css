@@ -434,7 +434,7 @@ h2::before {
   animation: rotateIt 7s linear infinite;
 }
 
-.eye {
+.logo {
   position: absolute;
   z-index: 2;
   width: 80px;
@@ -443,36 +443,27 @@ h2::before {
   left: 30%;
 }
 
-.eye__outer,
-.eye__inner,
-.eye__lashes-up,
-.eye__lashes-down {
+.logo__outer,
+.logo__inner,
+.logo__lashes-up,
+.logo__lashes-down {
   stroke: #000;
   fill: none;
   stroke-width: 1.5px;
 }
 
-.eye__lashes-down {
+.logo__lashes-down {
   opacity: 0;
 }
 
-.button--surtur .eye__lashes-up,
-.button--surtur .eye__inner,
-.button--surtur .eye__iris {
-  animation: blinkHide 2s step-end infinite;
-}
-
-.button--surtur .eye__lashes-down {
-  animation: blinkShow 2s step-end infinite;
-}
 
 /* INSTAFEED */
 
 .insta {
   display: flex;
   flex-wrap: wrap;
-  background: linear-gradient(#fff6e8, #cea1be);
   margin-top: 350px;
+  margin-bottom: 200px;
 }
 
 .instafeed {
@@ -486,7 +477,7 @@ h2::before {
   object-fit: contain;
   height: 220px;
   width: 100%;
-  padding: 3px;
+  padding: 10px;
 }
 
 /* ------------------------------------------------
@@ -495,12 +486,8 @@ h2::before {
 
 footer {
   background: linear-gradient(#cea1be, #ce84b4);
-  height: 45vh;
-}
-
-.cypres-logo {
-  padding-top: 5%;
-  margin: auto;
+  height: 55vh;
+  padding: 5%;
 }
 
 .footer-social {
@@ -508,7 +495,9 @@ footer {
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
+  margin: auto;
   margin-top: 5%;
+  width: 30%;
 }
 
 .footer-social img {
