@@ -7,6 +7,8 @@ var email = require('email-templates');
 var nodemailer = require('nodemailer');
 var transporterModel = require('../models/transporter');
 
+var hbs = require('nodemailer-express-handlebars');
+
 var uid2 = require('uid2');
 var bcrypt = require('bcrypt');
 
@@ -146,7 +148,7 @@ router.post('/email-template', function(req, res, next) {
     res.render('email-template', result, error);
 });
 
-router.get('/enter-in-contact-mail', function(req, res, next) {
+router.get('/mail', function(req, res, next) {
 
   // const transporter = nodemailer.createTransport({
   //   service: 'gmail',
@@ -155,16 +157,25 @@ router.get('/enter-in-contact-mail', function(req, res, next) {
   //   pass: ''
   //   }
   //   });
+  
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+    user: 'anthony.ohannessian@laplateforme.io',
+    pass: '@ze25793'
+    }
+    });
 
-  // const mailOptions = {
-  //     from: 'hello from confiance cosmetique',
-  //     to: 'laura.savickaite@laplateforme.io',
-  //     subject: 'Hello from Nodemailer',
-  //     text: 'Hello from Nodmailer!',
-  //     html: 'index.html',
-  //     };
-    
-  // transporter.sendMail(mailOptions)
+  const mailOptions = {
+      from: 'confiance cosmetique',
+      to: 'anthony.ohannessian@laplateforme.io; boris.tikhomiroff@laplateforme.io; laura.savickaite@laplateforme.io; marina.segor@laplateforme.io', 
+      subject: 'salut les foufounes prenez soin de vous',
+      text: 'Hello from Nodmailer!',
+      html: `<img src="https://cdns-images.dzcdn.net/images/artist/29eda9634fd3c5e166a5638131042b31/500x500.jpg" width="120px""> 
+      <h2 class="slogan">Prendre soin de soi c'est prendre confiance en soi</h2>`,
+      }
+
+  transporter.sendMail(mailOptions)
 
   res.render('index', { title: 'Express' });
 });
