@@ -168,11 +168,65 @@ router.get('/mail', function(req, res, next) {
 
   const mailOptions = {
       from: 'confiance cosmetique',
-      to: 'anthony.ohannessian@laplateforme.io; boris.tikhomiroff@laplateforme.io; laura.savickaite@laplateforme.io; marina.segor@laplateforme.io', 
-      subject: 'salut les foufounes prenez soin de vous',
-      text: 'Hello from Nodmailer!',
-      html: `<img src="https://cdns-images.dzcdn.net/images/artist/29eda9634fd3c5e166a5638131042b31/500x500.jpg" width="120px""> 
-      <h2 class="slogan">Prendre soin de soi c'est prendre confiance en soi</h2>`,
+      to: 'anthony.ohannessian@laplateforme.io; boris.tikhomiroff@laplateforme.io; laura.savickaite@laplateforme.io', 
+      subject: 'bienvenue',
+      text: 'confiance cosmetique vous dit bonjour!',
+      html: `<body>
+      <style>
+          .layout {
+              background-color: #fff6e8;
+              height: 350px;
+              width: 500px;
+              display: flex;
+              flex-direction: column;
+          }
+  
+          .top-text {
+              margin-top: 5%;
+              text-align: center;
+          }
+  
+          h1 {
+              margin: auto;
+              color: #c05299;
+              font-family: Georgia, 'Times New Roman', Times, serif;
+              text-transform: uppercase;
+          }
+  
+          p {
+              margin: auto;
+              font-family: Georgia, 'Times New Roman', Times, serif;
+          }
+  
+          .bottom-text p {
+              margin-top: 3%;
+              padding: 0 5%;
+              margin-bottom: 3%;
+          }
+  
+          .logo-social {
+              display: flex;
+              justify-content: space-around;
+              width: 30%;
+              margin-left: 50%;
+          }
+      </style>
+
+      <div class="layout">
+          <div class="top-text">
+              <h1>Confiance Cosmétiques</h1>
+              <p>prendre soin de soi c'est prendre confiance en soi</p>  
+              <img src="https://res.cloudinary.com/afohann/image/upload/v1648652598/confiancecosmetique/confiance-cosmetiques-logo_tzqf9o.png" width="80px">            
+          </div>
+  
+          <div class="bottom-text">
+              <p>
+                  Merci d'avoir rejoint la newsletter de Confiance Cosmétiques et pour votre confiance.
+                  Restez connectés avec nous et suivez nos avancées.
+              </p>
+          </div>
+      </div>
+  </body>`,
       }
 
   transporter.sendMail(mailOptions)
