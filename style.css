@@ -289,8 +289,8 @@ nav {
     text-transform: lowercase;
     -webkit-animation-name: fadeIn;
     animation-name: fadeIn;
-    -webkit-animation-duration: 15s;
-    animation-duration: 15s;
+    -webkit-animation-duration: 20s;
+    animation-duration: 20s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
     }
@@ -381,7 +381,7 @@ h2::before {
     display: flex;
     flex-wrap: wrap;
     background: linear-gradient(#fff6e8,#cea1be);
-    margin-top: 250px;
+    margin-top: 350px;
 }
 
 .instafeed {
