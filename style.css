@@ -9,21 +9,19 @@
 
 */
 
-
 /* ------------------------------------------------
                     FONTS
 --------------------------------------------------- */
 
 @font-face {
-    font-family: Titreprincipal;
-    src: url(fonts/FogtwoNo5\ copie.otf);
+  font-family: Titreprincipal;
+  src: url(fonts/FogtwoNo5\ copie.otf);
 }
 
 @font-face {
     font-family: logo;
     src: url(fonts/PPEiko-Thin\ copie.otf);
 }
-
 
 /* ------------------------------------------------
                     RESET
@@ -34,7 +32,7 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Reset margin */
@@ -47,23 +45,24 @@ h4,
 p,
 figure,
 picture {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /* Set up the body */
 
 body {
-    line-height: 1.5;
-    min-height: 100vh;
+  line-height: 1.5;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /* Make images easier to work with (si dieu le veut) */
 
 img,
 picture {
-    max-width: 100%;
-    display: block;
+  max-width: 100%;
+  display: block;
 }
 
 /* Make forms elements easier to work with */
@@ -72,45 +71,44 @@ input,
 button,
 textarea,
 select {
-    font: inherit;
+  font: inherit;
 }
 
 ul {
-    list-style-type: none;
-  }
+  list-style-type: none;
+}
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 /* Remove animations for those who turned them off (pour ceux qui décident d'enlever les animations dans lur browser : question d'accessiblilité) */
 
-@media (prefers-reduced-motions: reduce){
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-    }
+@media (prefers-reduced-motions: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
+
+
+
+
 
 
 /* ------------------------------------------------
                     LOADER
 --------------------------------------------------- */
 
-    /* custom variable : */
+/* custom variable : */
 
-    :root {
-        --gradient: linear-gradient(
-            45deg,
-            #ce99bb,
-            #fff6e8
-        );
-    }
-
+:root {
+  --gradient: linear-gradient(45deg, #ce99bb, #fff6e8);
+}
 
 #preloader {
     position: fixed;
@@ -140,54 +138,68 @@ a {
     animation: bg-animation 4s infinite alternate;
 }
 
-@keyframes bg-animation {
-    0% {
-        background-position: left;
-    }
-    100% {
-        background-position: right;
-    }
+#loader {
+  opacity: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  min-height: 100vh;
+  background-image: var(--gradient);
+  background-size: 400%;
+  animation: bg-animation 5s infinite alternate;
 }
 
-      
+@keyframes bg-animation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+
+
+
 
 /* ------------------------------------------------
                     LANDING PAGE
 --------------------------------------------------- */
 
 body {
-    background-color: #fff6e8;
+  background-color: #fff6e8;
 }
 
 .site-logo {
-    position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
-    font-family: Titreprincipal;
-    text-transform: uppercase;
-    font-size: 3rem;
-    color: #C05299;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: Titreprincipal;
+  text-transform: uppercase;
+  font-size: 3rem;
+  color: #c05299;
 }
 
 nav {
-    position: fixed;
+  position: fixed;
 
-    width: 100%;
-    height: 100px;
-    padding: 25px 40px;
-    display: flex;
-    justify-content: space-between;
-    text-transform: uppercase;
-    line-height: 100px;
-    color: rgb(53, 53, 53);
+  width: 100%;
+  height: 100px;
+  padding: 25px 40px;
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  line-height: 100px;
+  color: rgb(53, 53, 53);
 }
 
 .site-menu {
-    display: flex;
+  display: flex;
 }
 
 .menu-item {
-    margin-left: 60px;
+  margin-left: 60px;
 }
 
 .container {
@@ -202,71 +214,71 @@ nav {
 }
 
 .blocks {
-    display: flex;
-    font-size: 140px;
-    color: #47126B;
-    z-index: 2;
+  display: flex;
+  font-size: 140px;
+  color: #47126b;
+  z-index: 2;
 }
 
 .circle-shape {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 800px;
-    height: 800px;
-    border: 1px solid #585e50;;
-    border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 800px;
+  border: 1px solid #585e50;
+  border-radius: 100%;
 }
 
 .circle-shape-2 {
-    position: absolute;
-    top: 30%;
-    left: 20%;
-    transform: translate(-50%, -50%);
-    width: 140px;
-    height: 140px;
-    background: #EF8A17;
-    border-radius: 100%;
-    z-index: 2;
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  width: 140px;
+  height: 140px;
+  background: #ef8a17;
+  border-radius: 100%;
+  z-index: 2;
 }
 
 .circle-shape-3 {
-    position: absolute;
-    top: 64%;
-    left: 80%;
-    transform: translate(-50%, -50%);
-    width: 240px;
-    height: 240px;
-    background: #EF8A17;
-    border-radius: 100%;
-    z-index: 2;
+  position: absolute;
+  top: 64%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  width: 240px;
+  height: 240px;
+  background: #ef8a17;
+  border-radius: 100%;
+  z-index: 2;
 }
 
 .wrapper-image {
-    overflow: hidden;
-    position: absolute;
-    top: 35% !important;
-    right: 18%;
-    width: 30%;
-    height: 90vh;
+  overflow: hidden;
+  position: absolute;
+  top: 35% !important;
+  right: 18%;
+  width: 30%;
+  height: 90vh;
 }
 
 .wrapper-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .box {
-    background-color: #fff6e8;
-    opacity: 1;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    z-index: 0;
+  background-color: #fff6e8;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 0;
 }
 
 .slogan {
@@ -296,15 +308,72 @@ article {
     width: 100vw;
     /* height: 100vh; */
 }
+  
 
 
-
-
-
-
+  
 /* ------------------------------------------------
-                    CONTACT ME
+                    ABOUT
 --------------------------------------------------- */
+
+.about {
+  height: 200vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.about img {
+  width: 100%;
+}
+
+.grid h2 {
+  text-transform: uppercase;
+  position: relative;
+  top: -250px;
+  right: 120px;
+  font-size: 34px;
+}
+
+.grid:nth-of-type(1) h2 {
+  top: -450px;
+  right: -260px;
+}
+
+h2::before {
+  position: relative;
+  left: -2px;
+  top: -18px;
+  font-size: 10px;
+}
+
+.grid:nth-of-type(1) h2::before {
+  content: "01";
+}
+.grid:nth-of-type(2) h2::before {
+  content: "02";
+}
+.grid:nth-of-type(3) h2::before {
+  content: "03";
+}
+.grid-img1 {
+  grid-area: 3 / 2 / 6 / 5;
+}
+
+.grid-img2 {
+  grid-area: 4 / 9 / 8 / 12;
+}
+.grid-img3 {
+  grid-area: 9 / 4 / 12 / 7;
+}
+
+.content {
+  /* background-color: white; */
+  grid-area: 8 / 3 / 8 / 8;
+}
 
     /* INSTAFEED */
 
@@ -312,6 +381,7 @@ article {
     display: flex;
     flex-wrap: wrap;
     background: linear-gradient(#fff6e8,#cea1be);
+    margin-top: 250px;
 }
 
 .instafeed {
@@ -329,35 +399,33 @@ article {
 
 
 
-
-
 /* ------------------------------------------------
-                    FOOTER
---------------------------------------------------- */
-
-footer {
-    background: linear-gradient(#cea1be, #ce84b4);
-    height: 45vh;
-}
-
-.cypres-logo {
-    padding-top: 5%;
-    margin: auto;
-}
-
-.footer-social {
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: space-evenly;
-    margin-top: 5%;
-}
-
-.footer-social img {
-    width: 30px;    
-}
-
-.footer-social p {
-    font-size: 1.3rem;   
-    font-family: Titreprincipal;
-}
+                      FOOTER
+  --------------------------------------------------- */
+  
+  footer {
+      background: linear-gradient(#cea1be, #ce84b4);
+      height: 45vh;
+  }
+  
+  .cypres-logo {
+      padding-top: 5%;
+      margin: auto;
+  }
+  
+  .footer-social {
+      display: flex;
+      flex-direction: row;
+      align-content: center;
+      justify-content: space-evenly;
+      margin-top: 5%;
+  }
+  
+  .footer-social img {
+      width: 30px;    
+  }
+  
+  .footer-social p {
+      font-size: 1.3rem;   
+      font-family: Titreprincipal;
+  }
